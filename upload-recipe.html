@@ -1,0 +1,69 @@
+<!-- upload-recipe.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Recipe</title>
+</head>
+
+<body>
+
+    <h2>Basic Information</h2>
+    <form id="upload-recipe-form">
+
+        <!-- Left Column -->
+        <div>
+            <label for="title">Recipe Title</label><br>
+            <input type="text" id="title" name="title" placeholder="e.g., Creamy Parmesan Pasta"><br><br>
+
+            <label for="description">Description</label><br>
+            <textarea id="description" name="description" placeholder="Describe your recipe..."></textarea><br><br>
+
+            <label for="photos">Recipe Photos</label><br>
+            <input type="file" id="photos" name="photos" accept="image/*" multiple><br><br>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+            <label for="prep-time">Prep Time</label><br>
+            <input type="text" id="prep-time" name="prep-time" placeholder="e.g., 15 minutes"><br><br>
+
+            <label for="cook-time">Cook Time</label><br>
+            <input type="text" id="cook-time" name="cook-time" placeholder="e.g., 30 minutes"><br><br>
+
+            <label for="servings">Servings</label><br>
+            <input type="number" id="servings" name="servings" placeholder="e.g., 4"><br><br>
+
+            <label for="difficulty">Difficulty</label><br>
+            <select id="difficulty" name="difficulty">
+                <option value="">Select...</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select><br><br>
+
+            <label for="category">Category</label><br>
+            <select id="category" name="category">
+                <option value="">Select category</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="desserts">Desserts</option>
+                <option value="italian">Italian</option>
+                <option value="asian">Asian</option>
+                <option value="healthy">Healthy</option>
+            </select><br><br>
+
+            <label for="cuisine">Cuisine Type</label><br>
+            <select id="cuisine" name="cuisine">
+                <option value="">Select cuisine</option>
+                <option value="italian">Italian</option>
+                <option value="chinese">Chinese</option>
+                <option value="thai">Thai</option>
+                <option value="indian">Indian</option>
+                <option value="french">French</option>
+            </select><br><br>
+
+            <label for="tags">Tags</label><br>
+            <input type="text" id="tags" name="tags" placeholder="Add tags (press Enter to add)"><br><br>
+        </div>

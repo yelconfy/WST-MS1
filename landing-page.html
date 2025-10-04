@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FlavorShare - Share Your Flavor!</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom Styles (replace css/global.css with updated file) -->
+  <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body class="bg-[#FFF8F0] font-sans text-gray-800">
+
+  <!-- HEADER PLACEHOLDER -->
+  <div id="header"></div>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-b from-[#E4572E] to-[#F3A712] text-white text-center py-16">
+    <div class="max-inner-width px-4 mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold">Share Your Flavor!</h2>
+      <p class="mt-3 text-lg text-orange-100 max-w-2xl mx-auto">
+        Good food is best shared. Discover amazing recipes from home cooks around the world and share your own
+        creations.
+      </p>
+
+      <!-- SEARCH -->
+      <div class="mt-6">
+        <div class="relative w-full max-w-xl mx-auto">
+          <input class="search-input input-field w-full bg-white text-gray-700"
+            placeholder="Search for recipes, ingredients, or chefs..." />
+          <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+      </div>
+
+      <!-- CATEGORY PILLS -->
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <button class="pill bg-[#E4572E] text-white font-medium">All</button>
+        <button class="pill bg-white text-gray-700">Vegetarian</button>
+        <button class="pill bg-white text-gray-700">Vegan</button>
+        <button class="pill bg-white text-gray-700">Desserts</button>
+        <button class="pill bg-white text-gray-700">Italian</button>
+        <button class="pill bg-white text-gray-700">Asian</button>
+        <button class="pill bg-white text-gray-700">Healthy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENDING -->
+  <section class="max-inner-width px-6 py-12 mx-auto">
+    <h3 class="text-center text-2xl font-bold text-gray-800 mb-8">Trending Recipes</h3>
+
+    <!-- Card container -->
+    <div id="recipeCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cards will be injected here -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#2D2A26] text-gray-300 text-sm py-6 mt-12">
+    <div class="max-inner-width px-6 text-center mx-auto">
+      &copy; 2025 FlavorShare. Good food is best shared.
+    </div>
+  </footer>
+
+  <!-- placeholder for modal  -->
+  <div id="modalContainer"></div>
+
+  <script src="js/modal.js"></script>
+  <script src="js/recipe-modal.js"></script>
+  <script src="js/landing-page.js"></script>
+  <script src="js/header.js"></script>
+
+</body>
+
+</html>

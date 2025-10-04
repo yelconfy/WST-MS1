@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlavorShare - Sign In</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body class="bg-[#F9F6F1] text-gray-800">
+
+    <!-- HEADER PLACEHOLDER -->
+  <div id="header"></div>
+
+  <!-- SIGN IN FORM -->
+
+  <main class="flex justify-center items-center min-h-[calc(100vh-80px)] px-4">
+    <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+      <h2 class="text-2xl font-bold text-[#E4572E] mb-2 text-center">Sign In</h2>
+      <p class="text-sm text-gray-600 text-center mb-6">
+        Don't have an account?
+        <a href="sign-up.html" class="text-[#E4572E] hover:underline">Sign Up</a>
+      </p>
+
+      ```
+      <!-- NOTE: form id and input ids required by js/sign-in-up.js -->
+      <form id="sign-in-form" class="space-y-4">
+        <input id="signin-email" type="email" placeholder="Email"
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E4572E]"
+          required>
+
+        <input id="signin-password" type="password" placeholder="Password"
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E4572E]"
+          required>
+
+        <button type="submit" class="w-full bg-[#E4572E] text-white py-2 rounded-lg hover:bg-[#d04b27] transition">
+          Sign In
+        </button>
+      </form>
+
+      <a href="#" class="block text-center text-sm text-gray-600 mt-4 hover:text-[#E4572E]">
+        Continue without signing in
+      </a>
+    </div>
+    ```
+
+  </main>
+
+  <!-- Scripts -->
+
+  <script src="js/sign-in-up.js"></script>
+  <script src="js/header.js"></script>
+</body>
+
+</html>

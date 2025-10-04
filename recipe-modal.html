@@ -1,0 +1,61 @@
+<!-- Recipe Modal -->
+<div id="recipeModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full p-6 relative">
+    <!-- Close button -->
+    <button id="closeRecipeModal" class="absolute top-4 right-4 text-gray-600">✕</button>
+
+    <!-- Header -->
+    <div class="flex gap-4 mb-6">
+      <img src="" alt="Recipe Image" id="recipeImage" class="w-48 h-32 object-cover rounded-lg">
+      <div>
+        <h2 id="recipeTitle" class="text-2xl font-bold">Recipe Title</h2>
+        <p id="recipeAuthor" class="text-gray-600">by Author Name</p>
+        <div class="flex gap-4 text-sm text-gray-500 mt-2">
+          <span id="recipeRating">⭐ 4.9</span>
+          <span id="recipeComments">💬 235</span>
+          <span id="recipeViews">👁 24k views</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe Info -->
+    <div class="grid grid-cols-2 gap-6 text-sm mb-6">
+      <div>
+        <p><strong>Prep Time:</strong> <span id="recipePrep">10 min</span></p>
+        <p><strong>Cook Time:</strong> <span id="recipeCook">15 min</span></p>
+        <p><strong>Servings:</strong> <span id="recipeServings">4</span></p>
+      </div>
+      <div>
+        <p><strong>Difficulty:</strong> <span id="recipeDifficulty">Easy</span></p>
+        <p><strong>Cuisine:</strong> <span id="recipeCuisine">Italian</span></p>
+        <p><strong>Calories:</strong> <span id="recipeCalories">Optional</span></p>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="mb-6">
+      <h3 class="font-bold text-lg">Recipe Overview</h3>
+      <p id="recipeOverview" class="text-gray-700 mt-2">
+        Description of the recipe goes here.
+      </p>
+    </div>
+
+    <!-- Ingredients & Instructions -->
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="font-bold text-lg">Ingredients</h3>
+        <ul id="recipeIngredients" class="list-disc list-inside text-gray-700 mt-2">
+          <li>Ingredient 1</li>
+          <li>Ingredient 2</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg">Instructions</h3>
+        <ol id="recipeInstructions" class="list-decimal list-inside text-gray-700 mt-2">
+          <li>Step 1</li>
+          <li>Step 2</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
