@@ -1,69 +1,208 @@
-<!-- upload-recipe.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Upload Recipe</title>
+  <meta charset="UTF-8" />
+  <title>Upload Recipe • FlavorShare</title>
+
+  <!-- GLOBAL STYLES -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/recipe.css">
+
+  <!-- FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
+
+  <!-- DATA FIRST -->
+  <script src="js/recipes-data.js"></script>
+
+  <!-- UPLOAD LOGIC -->
+  <script src="js/upload-recipe.js" defer></script>
 </head>
 
 <body>
 
-    <h2>Basic Information</h2>
-    <form id="upload-recipe-form">
+  <!-- HEADER -->
+  <div id="header"></div>
+  <script src="js/header.js"></script>
 
-        <!-- Left Column -->
-        <div>
-            <label for="title">Recipe Title</label><br>
-            <input type="text" id="title" name="title" placeholder="e.g., Creamy Parmesan Pasta"><br><br>
+  <!-- MAIN WRAPPER -->
+  <main style="margin-top: 100px;">
 
-            <label for="description">Description</label><br>
-            <textarea id="description" name="description" placeholder="Describe your recipe..."></textarea><br><br>
+    <!-- STEP 1 WRAPPER -->
+    <div id="step1" class="upload-container">
 
-            <label for="photos">Recipe Photos</label><br>
-            <input type="file" id="photos" name="photos" accept="image/*" multiple><br><br>
+      <button onclick="history.back()" class="btn-secondary" style="margin-bottom:20px;">
+        ← Back
+      </button>
+
+      <h2 class="section-title">Upload a New Recipe</h2>
+      <p class="section-subtitle">Share your delicious creation with the FlavorShare community.</p>
+
+      <!-- TITLE -->
+      <div class="form-row">
+        <label>Recipe Title</label>
+        <input type="text" id="title" placeholder="e.g., Creamy Parmesan Pasta" required>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="form-row">
+        <label>Description</label>
+        <textarea id="description" rows="6" placeholder="Describe your recipe – what makes it special?"
+          required></textarea>
+      </div>
+
+      <!-- IMAGE UPLOAD -->
+      <div class="form-row">
+        <label>Main Recipe Image</label>
+
+        <div id="imageDrop" class="photo-drop">
+          Click or drag files here — main image only (extras coming soon)
         </div>
 
-        <!-- Right Column -->
+        <input type="file" id="imageInput" accept="image/*" style="display:none;" />
+
+        <div id="thumbs" style="margin-top:12px;"></div>
+
+        <p class="note">Extra photo thumbnails are coming soon — clicking them will show a “Coming soon” popup.</p>
+      </div>
+
+      <!-- TWO COLUMN SECTION -->
+      <div class="form-grid">
+
+        <!-- LEFT -->
         <div>
-            <label for="prep-time">Prep Time</label><br>
-            <input type="text" id="prep-time" name="prep-time" placeholder="e.g., 15 minutes"><br><br>
+          <div class="form-row">
+            <label>Prep Time</label>
+            <input type="text" id="prepTime" placeholder="e.g., 15 min">
+          </div>
 
-            <label for="cook-time">Cook Time</label><br>
-            <input type="text" id="cook-time" name="cook-time" placeholder="e.g., 30 minutes"><br><br>
+          <div class="form-row">
+            <label>Cook Time</label>
+            <input type="text" id="cookTime" placeholder="e.g., 30 min">
+          </div>
 
-            <label for="servings">Servings</label><br>
-            <input type="number" id="servings" name="servings" placeholder="e.g., 4"><br><br>
-
-            <label for="difficulty">Difficulty</label><br>
-            <select id="difficulty" name="difficulty">
-                <option value="">Select...</option>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select><br><br>
-
-            <label for="category">Category</label><br>
-            <select id="category" name="category">
-                <option value="">Select category</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="vegan">Vegan</option>
-                <option value="desserts">Desserts</option>
-                <option value="italian">Italian</option>
-                <option value="asian">Asian</option>
-                <option value="healthy">Healthy</option>
-            </select><br><br>
-
-            <label for="cuisine">Cuisine Type</label><br>
-            <select id="cuisine" name="cuisine">
-                <option value="">Select cuisine</option>
-                <option value="italian">Italian</option>
-                <option value="chinese">Chinese</option>
-                <option value="thai">Thai</option>
-                <option value="indian">Indian</option>
-                <option value="french">French</option>
-            </select><br><br>
-
-            <label for="tags">Tags</label><br>
-            <input type="text" id="tags" name="tags" placeholder="Add tags (press Enter to add)"><br><br>
+          <div class="form-row">
+            <label>Servings</label>
+            <input type="number" id="servings" placeholder="e.g., 4">
+          </div>
         </div>
+
+        <!-- RIGHT -->
+        <div>
+          <div class="form-row">
+            <label>Difficulty</label>
+            <select id="difficulty">
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Category</label>
+            <select id="category">
+              <option value="">Select category</option>
+              <option>Vegetarian</option>
+              <option>Vegan</option>
+              <option>Desserts</option>
+              <option>Healthy</option>
+              <option>Italian</option>
+              <option>Asian</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Cuisine</label>
+            <select id="cuisine">
+              <option value="">Select cuisine</option>
+              <option>Italian</option>
+              <option>Chinese</option>
+              <option>Thai</option>
+              <option>Indian</option>
+              <option>French</option>
+            </select>
+          </div>
+
+          <!-- TAGS -->
+          <div class="form-row">
+            <label>Tags</label>
+            <div id="tagsWrap" class="tag-container">
+              <input id="tagsInput" type="text" placeholder="Add tags (press Enter)" style="border:none;outline:none;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 1 BUTTONS -->
+      <div style="margin-top:30px; display:flex; gap:15px;">
+        <button id="resetBtn" class="btn-secondary">Reset</button>
+        <button id="toStep2" class="btn-primary">Continue →</button>
+      </div>
+
+    </div>
+    <!-- END STEP1 -->
+
+    <!-- STEP 2 WRAPPER -->
+    <div id="step2" class="upload-container hidden">
+
+      <h2 class="section-title">Ingredients & Steps</h2>
+      <p class="section-subtitle">Add your ingredients, steps, notes, and finalize your recipe.</p>
+
+      <!-- INGREDIENTS -->
+      <h3 class="section-title" style="margin-top:20px;">Ingredients</h3>
+      <div id="ingredientsList"></div>
+
+      <div style="display:flex; gap:10px; margin-top:15px;">
+        <button id="addIngredientBtn" class="btn-secondary">+ Ingredient</button>
+        <button id="addGroupBtn" class="btn-secondary">+ Group</button>
+      </div>
+
+      <!-- STEPS -->
+      <h3 class="section-title" style="margin-top:30px;">Steps</h3>
+      <div id="stepsList"></div>
+
+      <button id="addStepBtn" class="btn-secondary" style="margin-top:10px;">+ Add Step</button>
+
+      <!-- NOTES -->
+      <div class="form-row" style="margin-top:30px;">
+        <label>Notes (optional)</label>
+        <textarea id="notes" rows="4" placeholder="Extra tips or reminders..."></textarea>
+      </div>
+
+      <!-- CALORIES -->
+      <div class="form-row">
+        <label>Calories</label>
+        <input type="number" id="calories" placeholder="e.g., 500">
+      </div>
+
+      <!-- VIDEO -->
+      <div class="form-row">
+        <label>Video URL (optional)</label>
+        <input type="text" id="video" placeholder="YouTube link...">
+      </div>
+
+      <!-- STEP 2 BUTTONS -->
+      <div style="margin-top:30px; display:flex; gap:15px;">
+        <button id="backToStep1" class="btn-secondary">← Back</button>
+        <button id="publishBtn" class="btn-primary">Publish Recipe</button>
+      </div>
+
+    </div>
+    <!-- END STEP2 -->
+
+    <!-- TOAST -->
+    <div id="toast"
+      style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#E4572E; color:white; padding:12px 18px; border-radius:8px; font-size:14px; z-index:9999;">
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="text-align:center; margin-top:40px; padding:20px; color:#666;">
+    © 2025 FlavorShare — Good food is best shared.
+  </footer>
+
+</body>
+
+</html>

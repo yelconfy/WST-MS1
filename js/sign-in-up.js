@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const user = { email, username: email.split("@")[0] };
-      localStorage.setItem("loggedInUser", JSON.stringify(user));
+      localStorage.setItem("user", JSON.stringify(user));
 
       // ✅ Redirect to landing page (header will update automatically)
-      window.location.href = "landing-page.html";
+      window.location.href = "home.html";
     });
   }
 
@@ -28,20 +28,30 @@ document.addEventListener("DOMContentLoaded", () => {
     signUpForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const username = document.getElementById("signup-username").value.trim();
+      const firstName = document.getElementById("signup-first").value.trim();
+      const lastName = document.getElementById("signup-last").value.trim();
       const email = document.getElementById("signup-email").value.trim();
       const password = document.getElementById("signup-password").value.trim();
 
-      if (!username || !email || !password) {
+      if (!firstName || !lastName || !email || !password) {
         alert("Please fill in all fields.");
         return;
       }
 
+      const username = `${firstName} ${lastName}`;
       const user = { email, username };
-      localStorage.setItem("loggedInUser", JSON.stringify(user));
 
-      // ✅ Redirect to landing page
-      window.location.href = "landing-page.html";
+      localStorage.setItem("user", JSON.stringify(user));
+      window.location.href = "home.html";
     });
   }
+
+  // // --- LOG OUT HANDLER ---
+  // const logoutBtn = document.getElementById("logoutBtn");
+  // if (logoutBtn) {
+  //   logoutBtn.addEventListener("click", () => {
+  //     localStorage.removeItem("loggedInUser");
+  //     window.location.href = "landing-page.html";
+  //   });
+  // }
 });

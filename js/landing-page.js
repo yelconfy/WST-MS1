@@ -1,15 +1,15 @@
 // landing-page.js
 
-// --- Listener 1: run header update
-document.addEventListener("DOMContentLoaded", () => {
-  updateLandingPageUI();
-});
+// // --- Listener 1: run header update
+// document.addEventListener("DOMContentLoaded", () => {
+//   updateLandingPageUI();
+// });
 
 // --- Listener 2: inject cards
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Landing page JS loaded ✅");
 
-  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const loggedInUser = JSON.parse(localStorage.getItem("user"));
   const recipeCardsContainer = document.getElementById("recipeCards");
 
   const recipes = [

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FlavorShare - Home</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body class="bg-[#FFF8F0] font-sans text-gray-800 flex flex-col min-h-screen">
+
+  <!-- HEADER -->
+  <div id="header"></div>
+
+  <main class="flex-1 flex flex-col">
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-r from-[#E4572E] to-[#F3A712] text-white shadow-md"
+      style="padding-top: calc(var(--header-height) + 8px); padding-bottom: 20px;">
+
+      <div class="max-inner-width px-4 mx-auto">
+        <h1 id="welcomeTitle" class="text-3xl font-extrabold"></h1>
+        <p class="text-orange-100 text-lg mt-2 max-w-xl">
+          Here's what's cooking today. Discover new recipes, follow your favorite chefs,
+          and share your culinary creations.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-6">
+          <a href="upload-recipe.html"
+            class="px-6 py-3 rounded-full bg-white text-[#E4572E] font-semibold shadow-soft hover:bg-orange-50 transition">
+            <i class="fa-solid fa-upload mr-2"></i>
+            Upload a Recipe
+          </a>
+
+          <a href="explore.html"
+            class="px-6 py-3 rounded-full bg-white/80 text-white font-semibold border border-white/30 backdrop-blur-sm hover:bg-white/30 transition">
+            <i class="fa-solid fa-compass mr-2"></i>
+            Explore Recipes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN LAYOUT -->
+    <section class="max-inner-width px-6 py-10 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
+
+      <!-- SIDEBAR -->
+      <aside class="lg:col-span-1 space-y-4">
+
+        <div class="bg-white rounded-xl p-5 shadow-soft">
+          <h3 class="font-bold text-gray-800 mb-3">Quick Links</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li><a href="upload-recipe.html" class="hover:text-[#E4572E]">Upload Recipe</a></li>
+            <li><a href="my-profile.html" class="hover:text-[#E4572E]">My Profile</a></li>
+            <li><a href="#" class="hover:text-[#E4572E]">My Cookbook</a></li>
+            <li><a href="#" class="hover:text-[#E4572E]">Following</a></li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 shadow-soft">
+          <h3 class="font-bold text-gray-800 mb-3">Suggested Chefs</h3>
+          <p class="text-sm text-gray-600">Coming soon...</p>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT COLUMN WITH TABS -->
+      <section class="lg:col-span-3 space-y-8">
+
+        <!-- TAB BAR -->
+        <div class="flex items-center gap-6 border-b pb-2">
+          <button class="tab-btn active-tab" data-tab="continue">Continue Cooking</button>
+          <button class="tab-btn" data-tab="recommended">Recommended</button>
+          <button class="tab-btn" data-tab="feed">Your Feed</button>
+        </div>
+
+        <!-- TAB CONTENT GRID -->
+        <div id="tabContent" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-8">
+          <!-- Cards dynamically inserted by home.js -->
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer class="bg-[#2D2A26] text-gray-300 text-sm py-6">
+    <div class="max-inner-width px-6 text-center mx-auto">
+      &copy; 2025 FlavorShare — Good food is best shared.
+    </div>
+  </footer>
+
+  <script src="js/header.js"></script>
+  <script src="js/recipes-data.js"></script>
+  <script src="js/home.js"></script>
+
+</body>
+
+</html>

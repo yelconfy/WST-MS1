@@ -1,0 +1,112 @@
+/* Header */
+.recipe-header {
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.back-btn {
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Main container */
+.recipe-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Hero section */
+.recipe-hero {
+  text-align: center;
+}
+
+.recipe-img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.recipe-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.recipe-author {
+  color: #777;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Stats row */
+.recipe-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #444;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.recipe-stats span i {
+  color: #ff9f1c;
+  margin-right: 6px;
+}
+
+/* Section layout */
+.recipe-section {
+  margin-top: 40px;
+}
+
+.recipe-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Ingredients */
+.ingredient-list {
+  padding-left: 20px;
+}
+
+.ingredient-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.ingredient-list i {
+  color: #ff8f00;
+  margin-right: 8px;
+}
+
+/* Steps */
+.step-list {
+  padding-left: 20px;
+}
+
+.step-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #252320;
+  color: #fff;
+  text-align: center;
+  border-top: 1px solid #111;
+}
