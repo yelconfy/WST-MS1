@@ -1,4 +1,4 @@
-# RecipeShare Web App
+#Flavorshare Web App
 
 RecipeShare is a web app where users can **browse and view recipes**. To share your own recipes, you must create an account.  
 
@@ -40,7 +40,6 @@ Landing Page
 ├── Browse Recipes
 │ └── Recipe Detail / Modal
 ├── Sign Up / Login
-│ └── Profile Page
 │ └── Upload Recipe
 
 
