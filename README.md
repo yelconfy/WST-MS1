@@ -50,5 +50,4 @@ Landing Page
 **Browse Recipes:** Recipes display as cards; clicking opens details.  
 **Recipe Detail / Modal:** Shows full recipe info; modal closes correctly.  
 **Sign Up / Login:** Users can register/login; forms validate input.  
-**Profile Page:** Shows user info and uploaded recipes.  
 **Upload Recipe:** Users can add recipes; form has validation and shows success/error/loading states.  
